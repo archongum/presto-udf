@@ -15,6 +15,7 @@
  */
 package com.archon.presto;
 
+import com.archon.presto.udf.scalar.CommonFunctions;
 import com.archon.presto.udf.scalar.DateTimeFunctions;
 import com.facebook.presto.spi.Plugin;
 import com.google.common.collect.ImmutableSet;
@@ -29,6 +30,7 @@ public class UdfPlugin implements Plugin
     {
         return ImmutableSet.<Class<?>>builder()
                 .add(DateTimeFunctions.class)
+                .add(CommonFunctions.class)
                 .build();
     }
 }
