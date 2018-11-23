@@ -14,4 +14,5 @@
 | last_second           | timestamp   | date           | last second of the date  | last_second(current_date)             |
 | yesterday_last_second | timestamp   |                | last second of yesterday | yesterday_last_second()               |
 | yesterday             | date        |                | yesterday                | yesterday()                           |
+| rand                  | double      | varchar        | rand(String seed)        | rand('123a')                          |
 
