@@ -1,4 +1,4 @@
-package com.archon.presto.udf.scalar;
+package com.github.archongum.presto.udf.scalar;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

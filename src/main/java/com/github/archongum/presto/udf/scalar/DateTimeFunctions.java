@@ -1,4 +1,4 @@
-package com.archon.presto.udf.scalar;
+package com.github.archongum.presto.udf.scalar;
 
 import io.airlift.slice.Slice;
 import io.prestosql.spi.function.Description;
@@ -9,7 +9,7 @@ import io.prestosql.spi.type.StandardTypes;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import static com.archon.presto.udf.scalar.DateTimeUtils.OFFSET_MILLIS;
+import static com.github.archongum.presto.udf.scalar.DateTimeUtils.OFFSET_MILLIS;
 import static java.util.concurrent.TimeUnit.DAYS;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 

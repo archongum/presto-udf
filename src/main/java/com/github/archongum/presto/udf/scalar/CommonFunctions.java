@@ -1,4 +1,4 @@
-package com.archon.presto.udf.scalar;
+package com.github.archongum.presto.udf.scalar;
 
 import io.airlift.slice.Slice;
 import io.prestosql.spi.function.Description;

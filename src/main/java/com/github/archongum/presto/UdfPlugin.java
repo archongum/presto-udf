@@ -13,13 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.archon.presto;
+package com.github.archongum.presto;
 
-import com.archon.presto.udf.scalar.CommonFunctions;
-import com.archon.presto.udf.scalar.DateTimeFunctions;
-import com.google.common.collect.ImmutableSet;
+import com.github.archongum.presto.udf.aggregate.MaxCountElementAggregation;
+import com.github.archongum.presto.udf.scalar.ArrayMaxCountElementFunction;
+import com.github.archongum.presto.udf.scalar.CommonFunctions;
+import com.github.archongum.presto.udf.scalar.DateTimeFunctions;
 import io.prestosql.spi.Plugin;
 
+import java.util.HashSet;
 import java.util.Set;
 
 
@@ -28,9 +30,11 @@ public class UdfPlugin implements Plugin
     @Override
     public Set<Class<?>> getFunctions()
     {
-        return ImmutableSet.<Class<?>>builder()
-                .add(DateTimeFunctions.class)
-                .add(CommonFunctions.class)
-                .build();
+        Set<Class<?>> set = new HashSet<>();
+        set.add(ArrayMaxCountElementFunction.class);
+        set.add(CommonFunctions.class);
+        set.add(DateTimeFunctions.class);
+        set.add(MaxCountElementAggregation.class);
+        return set;
     }
 }
